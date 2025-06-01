@@ -16,8 +16,8 @@ public class RMQproducer {
 
 	@Value("${rabbitMq.key.name}")
 	private String keyName;
-
-	String message = "hello world!!";
+//
+//	String message = "hello world!!";
 
 	public void sendMessage(String message) {
 		rabbitTemplate.convertAndSend(exchangeName, keyName, message);
